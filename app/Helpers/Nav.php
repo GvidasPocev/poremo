@@ -35,27 +35,34 @@ class Nav
                     'services',
                 ],
             ],
-            // [
-            //     'routeName' => 'questionnaire',
-            //     'label' => __('content.nav.questionnaire'),
-            //     'active' => [
-            //         'questionnaire',
-            //     ],
-            // ],
-            // [
-            //     'routeName' => 'contact',
-            //     'label' => __('content.nav.contact'),
-            //     'active' => [
-            //         'contact',
-            //     ],
-            // ],
-            // [
-            //     'routeName' => 'blogs',
-            //     'label' => __('content.nav.blog'),
-            //     'active' => [
-            //         'blogs',
-            //     ],
-            // ],
+            [
+                'routeName' => 'about',
+                'label' => __('content.nav.about'),
+                'active' => [
+                    'about',
+                ],
+            ],
+            [
+                'routeName' => 'work',
+                'label' => __('content.nav.work'),
+                'active' => [
+                    'work',
+                ],
+            ],
+            [
+                'routeName' => 'gallery',
+                'label' => __('content.nav.gallery'),
+                'active' => [
+                    'gallery',
+                ],
+            ],
+            [
+                'routeName' => 'contact',
+                'label' => __('content.nav.contact'),
+                'active' => [
+                    'contact',
+                ],
+            ],
         ];
 
         // if(isset(Auth::user()->id)){
