@@ -24,10 +24,10 @@ class PagesController extends Controller
         ]);
     }
 
-    // public function contactuUs(Request $request, SendMessage $sendMessage)
-    // {
-    //     $sendMessage->send($request->all());
+    public function contactuUs(Request $request, SendMessage $sendMessage)
+    {
+        $sendMessage->send($request->all());
 
-    //     return back()->with('success', __('content.cantactus.success'));
-    // }
+        return back()->with('success', __('content.cantactus.success'));
+    }
 }
