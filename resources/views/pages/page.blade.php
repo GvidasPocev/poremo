@@ -1,5 +1,5 @@
 @extends('layouts.app')
- 
+
 @section('content')
 <div class="page content-max-block {{ $page->content_centered ? 'text-center' : '' }}">
     <h1>{{ $page->title }}</h1>
@@ -43,11 +43,11 @@
                     <div class="validation-block">{{ $message }}</div>
                 @enderror
 
-                <textarea 
+                <textarea
                     id="message"
                     name="message"
-                    placeholder="{{ __('content.cantactus.message') }}" 
-                    style="resize: none; height: 150px; margin-top:20px;" 
+                    placeholder="{{ __('content.cantactus.message') }}"
+                    style="resize: none; height: 150px; margin-top:20px; margin-bottom:20px;"
                     class="default-input default-input-textarea "
                 >{{ old('message') }}</textarea>
 
@@ -55,8 +55,8 @@
                     <div class="validation-block">{{ $message }}</div>
                 @enderror
 
-                <button 
-                    type="submit" 
+                <button
+                    type="submit"
                     class="default-button login-signin"
                 >{{ __('content.cantactus.send') }}</button>
             </form>

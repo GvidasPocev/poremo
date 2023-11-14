@@ -655,7 +655,10 @@ figure a figcaption {
                 color: #acabab;
                 padding: 12px 30px 12px 26px;
                 display: inline-block;
+                width: 100%;
+                white-space: nowrap;
             }
+
         }
 
         .navbar-light {
@@ -732,12 +735,6 @@ figure a figcaption {
 /* about section start */
 
 .home-block-1 {
-    .content-max-block {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
     .home-block-1-image {
         width: 100%;
     }
@@ -764,14 +761,14 @@ figure a figcaption {
     .image-2:after {
         content: "";
         display: block;
-        padding-bottom: 69%;
+        padding-bottom: 60%;
     }
 
     .home-image-1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/resources/assets/home-img-1.jpg');
         background-size: contain;
         background-position: center;
-        background-image: url('/resources/assets/home-img-1.jpg');
-        height: 600px;
+        background-repeat: no-repeat;
     }
 }
 
@@ -781,7 +778,13 @@ figure a figcaption {
 
     h1 {
         display: block;
-        margin: 25px 22px 7.5px 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--fifth-color);
+        padding: 25px 22px 7.5px 18px;
+        font-size: 30px;
     }
 
     h6 {
@@ -1027,7 +1030,7 @@ footer {
     }
 
     h3 {
-        font-size: 48px;
+        font-size: 25px;
     }
 
     h4 {
@@ -1334,7 +1337,7 @@ footer {
         padding: 80px;
 
         h1 {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
     }
 
