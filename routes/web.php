@@ -23,6 +23,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 
     Route::controller(App\Http\Controllers\PagesController::class)
         ->group(function () {
+            Route::get('/about', 'index')->name('about');
             Route::get('/contact', 'index')->name('contact');
             Route::post('/contact-us', 'contactuUs')->name('contact-us');
         });

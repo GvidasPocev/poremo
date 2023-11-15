@@ -20,8 +20,11 @@ class PageFinder
             case 'privacy-rules':
                 $pageType = 3;
                 break;
-            case 'eu-project':
+            case 'about':
                 $pageType = 4;
+                break;
+            case 'kiti':
+                $pageType = 5;
                 break;
         }
 
