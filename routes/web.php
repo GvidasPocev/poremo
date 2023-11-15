@@ -26,4 +26,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
             Route::get('/contact', 'index')->name('contact');
             Route::post('/contact-us', 'contactuUs')->name('contact-us');
         });
+
+    Route::controller(App\Http\Controllers\ServiceController::class)
+        ->prefix('/services')
+        ->group(function () {
+            Route::get('/', 'index')->name('services');
+            Route::get('/{slug}', 'show')->name('service');
+        });
 });
