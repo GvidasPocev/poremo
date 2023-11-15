@@ -15,7 +15,6 @@ class ServiceController extends Controller
             'services' => Service::query()
                 ->get()
                 ->map(function ($item) use ($request) {
-                    dd($request);
                     return [
                         'label'  => $item['title'],
                         'image'  => $item->imageLinkAttribute,

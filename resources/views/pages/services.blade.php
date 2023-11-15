@@ -5,7 +5,6 @@
         <h1 class="mb-4 text-center">{{ __('content.services.title') }}</h1>
         <div class="row">
             @foreach ($services as $service)
-            @dd($image)
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         @if (1 + 2 == 1)
