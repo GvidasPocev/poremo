@@ -27,6 +27,21 @@ $background-color_4: #13a25d;
     --opacity-hover: 0.7;
 }
 
+.table {
+    display: block !important;
+}
+
+.content-max-table {
+    padding-top: 50px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        padding-bottom: 10px;
+    }
+}
+
 .content-max-block {
     max-width: 1440px;
     margin: auto;
@@ -879,6 +894,7 @@ figure a figcaption {
 
 /* Footer section start */
 footer {
+    position: absolute;
     bottom: 0;
     width: 100%;
     float: left;

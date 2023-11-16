@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\SettingResource\Pages;
+namespace App\Filament\Resources\CompletedWorksResource\Pages;
 
-use App\Filament\Resources\SettingResource;
+use App\Filament\Resources\CompletedWorksResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditSetting extends EditRecord
+class EditCompletedWorks extends EditRecord
 {
-    protected static string $resource = SettingResource::class;
+    protected static string $resource = CompletedWorksResource::class;
 
     protected function getHeaderActions(): array
     {

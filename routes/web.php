@@ -34,4 +34,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
             Route::get('/', 'index')->name('services');
             Route::get('/{slug}', 'show')->name('service');
         });
+
+    Route::controller(App\Http\Controllers\CompletedWorkController::class)
+        ->prefix('/completed-works')
+        ->group(function () {
+            Route::get('/', 'index')->name('completed-works');
+        });
 });
