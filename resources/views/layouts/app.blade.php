@@ -21,6 +21,7 @@
 
         <div class="content" id="content">
             @yield('content')
+            <div class="push"></div>
         </div>
 
         @include('partials._cookie-notice')

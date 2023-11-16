@@ -27,6 +27,11 @@ $background-color_4: #13a25d;
     --opacity-hover: 0.7;
 }
 
+body {
+    margin: 0;
+    position: relative;
+}
+
 .table {
     display: block !important;
 }
@@ -51,6 +56,7 @@ $background-color_4: #13a25d;
     padding-top: 84px;
     width: 100%;
     position: relative;
+    min-height: calc(100vh - 340px);
 }
 
 .default-input,
@@ -893,11 +899,13 @@ figure a figcaption {
 }
 
 /* Footer section start */
+.push {
+    height: auto;
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     float: left;
+    width: 100%;
     background-color: #66b5ff;
     height: auto;
     padding: 70px 0px;
