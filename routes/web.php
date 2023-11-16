@@ -40,4 +40,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
         ->group(function () {
             Route::get('/', 'index')->name('completed-works');
         });
+
+    Route::controller(App\Http\Controllers\GalleryController::class)
+        ->group(function () {
+            Route::get('/gallery', 'index')->name('gallery');
+            Route::get('/certificates', 'index')->name('certificates');
+        });
 });

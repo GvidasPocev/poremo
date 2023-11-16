@@ -69,8 +69,7 @@ class CompletedWorksResource extends Resource
                             ->native(false)
                             ->weekStartsOnMonday()
                             ->closeOnDateSelection()
-                            ->displayFormat('Y')
-                            ->required(),
+                            ->displayFormat('Y'),
                     ]),
 
                     Grid::make(2)->columnSpan(1)->schema([
