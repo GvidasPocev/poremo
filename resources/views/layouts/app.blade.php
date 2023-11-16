@@ -8,10 +8,8 @@
     <title>{{ $settings['meta_title'] ?? '' }}</title>
     <meta name="description" content="{{ $settings['meta_description'] ?? '' }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     @vite(['resources/css/app.scss'])
-    <script src="{{ asset('js/custom.js') }}"></script>
+    @vite(['resources/js/app.js'])
     <link rel="icon" href="{{ asset('assets/favicon.png') }}">
 </head>
 

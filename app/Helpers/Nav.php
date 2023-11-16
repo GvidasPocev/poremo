@@ -57,6 +57,13 @@ class Nav
                 ],
             ],
             [
+                'routeName' => 'certificates',
+                'label' => __('content.nav.certificates'),
+                'active' => [
+                    'certificates',
+                ],
+            ],
+            [
                 'routeName' => 'contact',
                 'label' => __('content.nav.contact'),
                 'active' => [

@@ -1,5 +1,5 @@
 <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:url({{ Vite::asset('resources/assets/header-bg.png') }});background-size:100%;background-repeat:no-repeat;">
         <a href="{{ route('home') }}" class="header-logo">
             <img src="{{ $logo }}" />
         </a>

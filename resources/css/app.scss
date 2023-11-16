@@ -47,6 +47,13 @@ body {
     }
 }
 
+.content-max-gallery {
+    padding-top: 50px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
 .content-max-block {
     max-width: 1440px;
     margin: auto;
@@ -656,7 +663,6 @@ figure a figcaption {
     z-index: 333;
 
     .bg-light {
-        background-image: url(../assets/header-bg.png);
         background-color: #0c0c96 !important;
         background-size: 100%;
         background-repeat: no-repeat;
