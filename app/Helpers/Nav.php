@@ -43,10 +43,10 @@ class Nav
                 ],
             ],
             [
-                'routeName' => 'work',
+                'routeName' => 'completed-works',
                 'label' => __('content.nav.work'),
                 'active' => [
-                    'work',
+                    'completed-works',
                 ],
             ],
             [
