@@ -16,6 +16,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceResource extends Resource
 {
@@ -28,6 +29,11 @@ class ServiceResource extends Resource
     protected static ?string $pluralModelLabel = 'Paslaugos';
 
     protected static ?string $navigationGroup = 'Turinys';
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return Auth::user()->is_admin === 1 && Auth::user()->hasAnyRole(['super-admin', 'admin', 'moderator']);
+    }
 
     public static function form(Form $form): Form
     {
@@ -93,15 +99,15 @@ class ServiceResource extends Resource
                             ->directory('services')
                             ->columnSpan('full'),
 
-                        Forms\Components\FileUpload::make('inner_image')
-                            ->label('Nuotraukų galerija')
-                            ->acceptedFileTypes(['image/png, image/jpeg', 'image/jpg'])
-                            ->image()
-                            ->multiple()
-                            ->maxSize(4096)
-                            ->imageResizeTargetWidth('540')
-                            ->directory('services')
-                            ->columnSpan('full'),
+                        // Forms\Components\FileUpload::make('inner_image')
+                        //     ->label('Nuotraukų galerija')
+                        //     ->acceptedFileTypes(['image/png, image/jpeg', 'image/jpg'])
+                        //     ->image()
+                        //     ->multiple()
+                        //     ->maxSize(4096)
+                        //     ->imageResizeTargetWidth('540')
+                        //     ->directory('services')
+                        //     ->columnSpan('full'),
 
                         Forms\Components\Checkbox::make('show_in_index')
                             ->label('Tituliniame')
