@@ -14,15 +14,6 @@ class ServiceController extends Controller
         return view('pages.services', [
             'services' => Service::query()
                 ->get()
-                ->map(function ($item) use ($request) {
-                    return [
-                        'label'  => $item['title'],
-                        'image'  => $item->imageLinkAttribute,
-                        'short_description'  => $item['short_description'],
-                        'active' => ($request->level) == ($item['id'] ?? null) ? true : false,
-                        'url'    => $item['slug'],
-                    ];
-                }),
         ]);
     }
 
