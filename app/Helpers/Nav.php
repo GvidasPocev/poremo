@@ -2,17 +2,14 @@
 
 namespace App\Helpers;
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-
 class Nav
 {
     private static function format($items)
     {
         return collect($items)->map(function ($item) {
             return [
-                'url' => $item['routeName'],
-                'label' => $item['label'],
+                'url'    => $item['routeName'],
+                'label'  => $item['label'],
                 'active' => $item['active'],
             ];
         });
@@ -30,43 +27,43 @@ class Nav
             // ],
             [
                 'routeName' => 'services',
-                'label' => __('content.nav.services'),
-                'active' => [
+                'label'     => __('content.nav.services'),
+                'active'    => [
                     'services',
                 ],
             ],
             [
                 'routeName' => 'about',
-                'label' => __('content.nav.about'),
-                'active' => [
+                'label'     => __('content.nav.about'),
+                'active'    => [
                     'about',
                 ],
             ],
             [
                 'routeName' => 'completed-works',
-                'label' => __('content.nav.work'),
-                'active' => [
+                'label'     => __('content.nav.work'),
+                'active'    => [
                     'completed-works',
                 ],
             ],
             [
                 'routeName' => 'gallery',
-                'label' => __('content.nav.gallery'),
-                'active' => [
+                'label'     => __('content.nav.gallery'),
+                'active'    => [
                     'gallery',
                 ],
             ],
             [
                 'routeName' => 'certificates',
-                'label' => __('content.nav.certificates'),
-                'active' => [
+                'label'     => __('content.nav.certificates'),
+                'active'    => [
                     'certificates',
                 ],
             ],
             [
                 'routeName' => 'contact',
-                'label' => __('content.nav.contact'),
-                'active' => [
+                'label'     => __('content.nav.contact'),
+                'active'    => [
                     'contact',
                 ],
             ],
@@ -91,30 +88,30 @@ class Nav
         $items = [
             [
                 'routeName' => 'personal-courses',
-                'label' => __('content.nav.personal.courses'),
-                'active' => [
+                'label'     => __('content.nav.personal.courses'),
+                'active'    => [
                     'personal-courses',
                     'personal-course',
                 ],
             ],
             [
                 'routeName' => 'personal-certificates',
-                'label' => __('content.nav.personal.certificates'),
-                'active' => [
+                'label'     => __('content.nav.personal.certificates'),
+                'active'    => [
                     'personal-certificates',
                 ],
             ],
             [
                 'routeName' => 'personal-messages',
-                'label' => __('content.nav.personal.messages'),
-                'active' => [
+                'label'     => __('content.nav.personal.messages'),
+                'active'    => [
                     'personal-messages',
                 ],
             ],
             [
                 'routeName' => 'personal-data',
-                'label' => __('content.nav.personal.data'),
-                'active' => [
+                'label'     => __('content.nav.personal.data'),
+                'active'    => [
                     'personal-data',
                 ],
             ],
@@ -126,30 +123,33 @@ class Nav
     public static function getFooter()
     {
         $items = [
-            [
-                'routeName' => 'terms-rules',
-                'label' => __('content.footer.terms'),
-                'active' => [
-                    'contact',
+            'column1' => [
+                'title' => 'Kontaktai',
+                'items' => [
+                    ['text' => 'Gamyklos g. 54'],
+                    ['text' => 'Mažeikiai'],
+                    ['text' => 'Lietuva'],
                 ],
             ],
-            [
-                'routeName' => 'privacy-rules',
-                'label' => __('content.footer.privacy'),
-                'active' => [
-                    'contact',
+            'column2' => [
+                'title' => 'Direktorius',
+                'items' => [
+                    ['text' => 'Tadas Šikšnius'],
+                    ['text' => 'Mob. tel.: +370 671 10266'],
+                    ['text' => 'El. paštas: tadas@poremo.com'],
                 ],
             ],
-            [
-                'routeName' => 'eu-project',
-                'label' => __('content.footer.euproject'),
-                'active' => [
-                    'contact',
+            'column3' => [
+                'title' => 'Vykdantysis direktorius',
+                'items' => [
+                    ['text' => 'Vytautas Jasmontas'],
+                    ['text' => 'Mob. tel.: +370 614 09176'],
+                    ['text' => 'El. paštas: vytautas@poremo.com'],
                 ],
             ],
         ];
 
-        return self::format($items);
+        return $items;
     }
 
     public static function getFooterNav()
@@ -157,36 +157,36 @@ class Nav
         $items = [
             [
                 'routeName' => 'home',
-                'label' => __('content.nav.home'),
-                'active' => [
+                'label'     => __('content.nav.home'),
+                'active'    => [
                     'home',
                 ],
             ],
             [
                 'routeName' => 'courses',
-                'label' => __('content.nav.courses'),
-                'active' => [
+                'label'     => __('content.nav.courses'),
+                'active'    => [
                     'courses',
                 ],
             ],
             [
                 'routeName' => 'questionnaire',
-                'label' => __('content.nav.questionnaire'),
-                'active' => [
+                'label'     => __('content.nav.questionnaire'),
+                'active'    => [
                     'questionnaire',
                 ],
             ],
             [
                 'routeName' => 'contact',
-                'label' => __('content.nav.contact'),
-                'active' => [
+                'label'     => __('content.nav.contact'),
+                'active'    => [
                     'contact',
                 ],
             ],
             [
                 'routeName' => 'blogs',
-                'label' => __('content.nav.blog'),
-                'active' => [
+                'label'     => __('content.nav.blog'),
+                'active'    => [
                     'blogs',
                 ],
             ],
