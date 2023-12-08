@@ -29,7 +29,7 @@ Route::group(
             ->group(function () {
                 Route::get('/about', 'index')->name('about');
                 Route::get('/contact', 'index')->name('contact');
-                Route::post('/contact-us', 'contactuUs')->name('contact-us');
+                Route::post('/contact-us', 'contactUs')->name('contact-us');
             });
 
         Route::controller(App\Http\Controllers\ServiceController::class)
